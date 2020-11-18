@@ -1,0 +1,265 @@
+
+
+<div class="wrapper">
+
+{{>header}}
+{{>sideMenu}}
+
+ <!-- Content Wrapper. Contains page content -->
+
+  <div class="content-wrapper">
+
+    <!-- Content Header (Page header) -->
+
+    <section class="content-header">
+
+      <h1>
+
+        Users
+
+        <small>Control panel</small>
+
+      </h1>
+
+    
+
+      <ol class="breadcrumb">
+
+       <li><a href="http://localhost/foodie/admin/Welcome"><i class="fa fa-dashboard"></i> Home</a></li>
+
+        <li class="active">Users List</li>
+
+      </ol>
+
+    </section>
+
+    
+
+             
+
+    
+
+    
+
+     
+
+    <div style="float:right;padding:10px;"><a href="/admin/add-user" class="btn btn-block btn-info">Add User</a></div>
+
+    
+
+     
+
+     <div class="col-xs-12">
+
+     	<div class="box">
+
+            <div class="box-header with-border">
+
+              <h3 class="box-title">Search</h3>
+
+            </div>
+
+            
+
+		<div class="box-body">
+
+          <form action="http://localhost/foodie/admin/Welcome/user_listing" method="get">
+
+          
+
+          
+
+          
+
+          <div class="form-group col-sm-4">
+
+            <label>Email:</label>
+
+            <input type="text" class="form-control" placeholder="Search" name="email" aria-controls="example1" value="">
+
+            </div>
+
+
+
+          <div class="form-group col-sm-4">
+
+            <label>Name:</label>
+
+            <input type="text" class="form-control" placeholder="Search" name="fname" aria-controls="example1" value="">
+
+            </div>
+
+            
+
+            
+
+     
+
+   
+
+        <div class="form-group col-sm-6">
+
+        <label>&nbsp;</label>
+
+        <div class="input-group">
+
+        <button style="margin-right:15px;" type="submit" class="btn btn-primary">Search</button>
+
+        <a href="user_listing-2.html" class="btn btn-primary">Reset</a>
+              
+       &nbsp;<a href="user_listing0180.html?email=&amp;fname=&amp;excel=1" class="btn btn-primary">Export User</a>
+
+        </div>
+
+      </div>
+
+              
+
+       <!--<div class="col-sm-3">
+
+        <a href="http://localhost/foodie/admin/Welcome/users_list" class="btn btn-primary">Reset</a>
+
+      </div>-->
+
+    </form>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    
+
+      <!-- Main content -->
+
+    <section class="content">
+
+      <div class="row">
+
+        <div class="col-xs-12">
+
+          <div class="box">
+
+           <!-- <div class="box-header">
+
+              <h3 class="box-title">Hover Data Table</h3>
+
+            </div>-->
+
+            <!-- /.box-header -->
+
+            <div class="box-body">
+
+              <table id="example2" class="table table-bordered table-hover">
+
+                <thead>
+
+                <tr>
+
+                  <th>Sl No.</th>
+
+                   <th>Fname</th>
+				           <th>Lname</th>
+
+                  <th>User Name</th>
+
+                  <th>Mobile</th>
+
+                  <th>Email</th>
+
+                  
+
+                     <th>
+
+                        Action
+
+                     </th>
+
+                       
+
+                </tr>
+
+                </thead>
+
+                <tbody>
+              {{#each users}}
+                
+            <tr>
+
+                 <td>{{this.user_id}}</td>
+                 <td>{{this.fname}}</td>
+				         <td>{{this.lname}}</td>
+				         <td>{{this.username}}</td>
+                 <td>{{this.phoneno}}</td>
+                 <td>{{this.email}}</td>
+                 <td>{{this.status}}</td>
+                 <td>
+                    <a title="Edit" href="/admin/edit-user/{{this.user_id}}"><i class="fa fa-fw fa-edit"></i> </a>
+                    <a title="Delete" onClick="return confirm('Are you sure want to delete?');" href="/admin/delete-user/{{this.user_id}}"> <i class="fa fa-trash" aria-hidden="true"></i> </a>
+
+                </td> 
+
+            </tr>
+         {{/each}}
+                </tbody>
+
+              </table>
+
+            </div>
+
+            
+
+             <div class="box-footer clearfix">
+
+                          <ul class="pagination pagination-sm no-margin pull-right">
+
+                          
+
+                             
+                         
+
+                          </ul>
+
+                        </div>
+
+                        <!-- /.box-body -->
+
+                      </div>
+
+                      <!-- /.box -->
+
+                    </div>
+
+            <!-- /.box-body -->
+
+          </div>
+
+          <!-- /.box -->
+	</section>
+        </div>
+        </div>
+
+        <!-- /.col -->
+
+      </div>
+        <!-- /.col -->
+
+      </div>
+
+      <!-- /.row -->
+
+    
+
+    <!-- /.content -->
+
+  </div>
+
+  <!-- /.content-wrapper -->
+{{>footer}}
+
+  
+
+  
+
+  

@@ -1,0 +1,285 @@
+
+  <div class="wrapper">
+
+{{>header}}
+{{>sideMenu}}
+
+  
+  <!-- Content Wrapper. Contains page content -->
+
+  <div class="content-wrapper">
+
+    <!-- Content Header (Page header) -->
+
+    <section class="content-header">
+
+     
+		<h1> Update User </h1> 
+
+		
+   
+
+      <ol class="breadcrumb">
+
+        <li><a href="staff.html"><i class="fa fa-dashboard"></i> Home</a></li>
+
+        <li><a href="user-listing">Users List</a></li>
+
+        
+         <!--<li class="active"><a href="http://localhost/foodie/admin/Welcome/add_staff" class="backbutton"><font color="#FFFFFF">Add Staff</font></a></li>-->
+
+         
+      </ol>
+
+    </section>
+
+			  
+
+    <!-- Main content -->
+
+    
+
+    					  
+           
+
+    <section class="content">
+
+    
+
+      <div class="row">
+
+        <!-- left column -->
+
+        <div class="col-md-8">
+
+          <!-- general form elements -->
+        	<form action="/admin/edit/{{user.user_id}}"  method="post" id="form_sample_product" name="form_sample_product"  >
+
+          <div class="box box-primary">
+
+            
+
+            <!-- /.box-header -->
+
+            <!-- form start -->
+
+            
+
+                <div class="box-body">
+
+                  
+                <div class="form-group">
+
+                  <label for="exampleInputEmail1">First Name:</label>
+
+                  <input type="text"  id="fname" class="form-control" name="fname" value={{user.fname}} placeholder="First Name"   required>
+
+                </div>
+				
+				<div class="form-group">
+
+                  <label for="exampleInputEmail1">Last Name:</label>
+
+                  <input type="text"  id="lname" class="form-control" name="lname" value="{{user.lname}}" placeholder="Last Name" required>
+
+                </div>
+				
+				<div class="form-group">
+
+                  <label for="exampleInputEmail1">User Name:</label>
+
+                  <input type="text"  id="username" class="form-control" name="username" value="{{user.username}}" placeholder="User Name" required>
+
+                </div>
+
+                
+
+                
+
+                <div class="form-group">
+
+                  <label for="exampleInputEmail1"> Password:</label>
+
+                <input type="password" value="" id="password" class="form-control" name="password" value="{{user.password}}" placeholder="Password" required>
+
+                </div>
+
+                
+
+                <div class="form-group">
+
+                  <label for="exampleInputEmail1"> Email</label>
+
+                <input type="email"  id="email" class="form-control" name="email" value="{{user.email}}"  placeholder="Email"  required>
+
+                </div>
+
+                
+
+                <div class="form-group">
+
+                  <label for="exampleInputEmail1"> Phone:</label>
+
+                <input type="phone"  id="phoneno" class="form-control" name="phoneno" value="{{user.phoneno}}" placeholder="Phone" required>
+
+                </div>
+				
+				
+                 <div class="form-group">
+
+                  <label for="exampleInputEmail1">City:</label>
+
+                <input type="text"  id="city" class="form-control" name="city" value="{{user.city}}" placeholder="City" required>
+
+                </div>
+
+                
+
+                
+
+                 <div class="form-group">
+
+                  <label for="exampleInputEmail1">State:</label>
+
+                <input type="text"  id="state" class="form-control" name="state" value="{{user.state}}" placeholder="State" required>
+
+                </div>
+
+                
+
+                
+
+                 <div class="form-group">
+
+                  <label for="exampleInputEmail1"> Country:</label>
+
+                <input type="text"  id="country" class="form-control" name="country" value="{{user.country}}"  placeholder="Country" required>
+
+                </div>
+
+                
+
+                
+
+                 <div class="form-group">
+
+                  <label for="exampleInputEmail1">ZipCode:</label>
+
+                <input type="text"  id="zipcode" class="form-control" name="zipcode" value="{{user.zipcode}}" placeholder="ZipCode" required>
+
+                </div>
+
+                
+
+                         <div class="form-group">
+
+                  <label for="exampleInputEmail1">Address:</label>
+
+                  <textarea class="textarea" name="address" id="address" placeholder="Place some text here"
+
+                          style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{user.address}}</textarea>
+
+                </div>              
+
+                
+
+              
+
+              <div style="clear:both;"></div>
+
+                 <div class="form-group">
+
+                    <label>Status</label>
+
+                    <select class="form-control select2" name="status" id="status" data-placeholder="Select a State">
+
+                      <option value="">Select</option>
+
+                      <option value="Active" if(user.status=='Active'){ selected }>Active</option>
+
+                    <option value="Inactive" if(user.status=='Inactive'){ selected }>Inactive</option>   
+
+                    </select>
+
+              </div>
+
+         
+
+              
+
+		 
+
+              
+
+              </div>
+
+              <!-- /.box-body -->
+
+
+
+              <div class="box-footer">
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+              </div>
+
+           
+
+          </div>
+</form>
+          <!-- /.box -->
+
+
+
+          <!-- Form Element sizes -->
+
+          
+
+          <!-- /.box -->
+
+
+
+          
+
+          <!-- /.box -->
+
+
+
+          <!-- Input addon -->
+
+          
+
+          <!-- /.box -->
+
+
+
+        </div>
+
+        <!--/.col (left) -->
+
+        <!-- right column -->
+
+        
+
+        <!--/.col (right) -->
+
+      </div>
+
+      <!-- /.row -->
+
+    </section>
+
+
+
+    <!-- /.content -->
+
+  </div>
+
+  <!-- /.content-wrapper -->
+  {{>footer}}
+
+  
+
+  
+
+  
